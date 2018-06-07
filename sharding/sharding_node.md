@@ -2,6 +2,8 @@
 **Status: Final**
 **Authors: Preston Van Loon, Raul Jordan, Terence Tsao, Nishant Das**
 **Created: 2018-06-03**
+
+[Original Google doc](https://docs.google.com/document/d/1J4AEHTSKDGJpNzWS7ZXPqD0yEjqecb-xjdVkjGrxRMk/edit)
  
 ## Objective
 We aim to provide a robust design to leverage much of the existing work within the go-ethereum project while supporting the complexity of a L1 sharded universe. This doc specifically defines the building blocks for the sharding node or server such that any sharding actor can effectively participate.
