@@ -1,12 +1,16 @@
 # Sharding Node Design Doc
+
 **Status: Final**
+
 **Authors: Preston Van Loon, Raul Jordan, Terence Tsao, Nishant Das**
+
 **Created: 2018-06-03**
 
 [Original Google doc](https://docs.google.com/document/d/1J4AEHTSKDGJpNzWS7ZXPqD0yEjqecb-xjdVkjGrxRMk/edit)
  
 ## Objective
 We aim to provide a robust design to leverage much of the existing work within the go-ethereum project while supporting the complexity of a L1 sharded universe. This doc specifically defines the building blocks for the sharding node or server such that any sharding actor can effectively participate.
+
 ## Background
 The Ethereum research team and leading community members have identified sharding as a desirable scaling solution that may be able to provide immediate scalability improvements to the order of x10 - x100 in transaction throughput. The fundamental attributes of sharding Ethereum are not a new paradigm in the software world. Databases and other distributed systems have been using sharding for decades with consistent success. Researchers and community members have been working tirelessly to come up with a spec for sharding Ethereum and, in early 2018, the specification has materialized to the point that implementation can begin. Prysmatic Labs, among many other teams, has taken the initiative to implement a sharding client.
 
@@ -340,9 +344,10 @@ Issue: [prysmaticlabs/geth-sharding#161](https://github.com/prysmaticlabs/geth-s
 Identified in the section on Constructing the sharding node, we may need a sharding specific transaction pool. The issue here is to design and implement a transaction pool for a sharded node. 
 
 Some questions to answer:
-*What are the use cases?*
-*How will it work?*
-*Why is it necessary rather than a global TxPool with geth’s current implementation?*
+
+- *What are the use cases?*
+- *How will it work?*
+- *Why is it necessary rather than a global TxPool with geth’s current implementation?*
 
 ### Refactoring sharding node, notary, proposer
 *Scope: Large refactoring, breaking changes.*
